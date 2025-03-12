@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Crypto Conversion</h2>
+
+        <!-- FROM Card -->
+        <div class="card">
+            <div class="card-header">From</div>
+            <div class="card-body">
+                <select id="from-crypto">
+                    <option value="BTC">Bitcoin (BTC)</option>
+                    <option value="ETH">Ethereum (ETH)</option>
+                    <option value="LUSD">LUSD (LUSD)</option>
+                    <option value="USDT">Tether (USDT)</option>
+                    <option value="BNB">Binance Coin (BNB)</option>
+                    <option value="ADA">Cardano (ADA)</option>
+                </select>
+                <input type="number" id="from-amount" placeholder="Enter amount">
+            </div>
+        </div>
+
+        <!-- SWAP BUTTON -->
+        <button class="swap-btn" onclick="swapCoins()">
+            <div class="arrow up"></div>
+            <div class="arrow down"></div>
+        </button>
+
+        <!-- TO Card -->
+        <div class="card">
+            <div class="card-header">To</div>
+            <div class="card-body">
+                <select id="to-crypto">
+                    <option value="BTC">Bitcoin (BTC)</option>
+                    <option value="ETH">Ethereum (ETH)</option>
+                    <option value="LUSD">LUSD (LUSD)</option>
+                    <option value="USDT">Tether (USDT)</option>
+                    <option value="BNB">Binance Coin (BNB)</option>
+                    <option value="ADA">Cardano (ADA)</option>
+                </select>
+                <input type="text" id="to-amount" placeholder="Converted amount" readonly>
+            </div>
+        </div>
+
+        <!-- CONVERSION RATE -->
+        <div class="conversion-rate" id="conversion-rate-text">Rate: --</div>
+
+        <!-- PROCEED BUTTON -->
+        <a href="error.html">
+            <button class="proceed-btn">Proceed</button>
+        </a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
